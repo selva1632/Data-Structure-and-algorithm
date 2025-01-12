@@ -32,3 +32,43 @@ public:
         return provinces;
     }
 };
+
+
+// using adjacency list
+
+class Solution {
+  public:
+    void dfs(int node, vector<int> adj[], vector<int> &visited) {
+        visited[node] = true;
+        for (auto it: adj[node]) {
+            if (!visited[it]) {
+                dfs(it, adj, visited);
+            }
+        }
+    }
+  
+    int numProvinces(vector<vector<int>> adj, int V) {
+        // code here
+        // create adjList
+        
+        vector<int> adjList[V];
+        
+        for (int i = 0; i < adj.size(); i++) {
+            for (int j = 0; j < adj[0].size(); j++) {
+                if (i != j && adj[i][j] == 1) {
+                    adjList[i].push_back(j);
+                }
+            }
+        }
+        
+        vector<int> visited(V, false);
+        int provinces = 0;
+        for (int i = 0; i < V; i++) {
+            if (!visited[i]) {
+                provinces++;
+                dfs(i, adjList, visited);
+            }
+        }
+        return provinces;
+    }
+};
