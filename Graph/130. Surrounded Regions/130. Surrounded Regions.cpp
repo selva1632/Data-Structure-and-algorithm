@@ -49,8 +49,8 @@ public:
             for (int k = 0; k < 4; k++) {
                 int r = x + dx[k];
                 int c = y + dy[k];
-
-                if (r >= 0 && r < n && c >= 0 && c < m && board[r][c] == 'O') {
+                
+                if (r >= 0 && r < n && c >= 0 && c < m && board[r][c] == 'O' && vis[r][c] == 0) {
                     vis[r][c] = 1;
                     q.push({r,c});
                 }
