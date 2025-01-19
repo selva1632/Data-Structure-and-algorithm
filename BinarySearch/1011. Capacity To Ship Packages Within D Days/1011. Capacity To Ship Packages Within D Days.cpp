@@ -2,7 +2,7 @@
 
 #include<iostream>
 #include<vector>
-#include<climits>
+#include <numeric>
 using namespace std;
 
 class Solution {
