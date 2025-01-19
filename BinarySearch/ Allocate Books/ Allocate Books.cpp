@@ -2,7 +2,7 @@
 
 #include<iostream>
 #include<vector>
-#include<climits>
+#include<numeric>
 using namespace std;
 
 int helper(vector<int>& arr, int page) {
