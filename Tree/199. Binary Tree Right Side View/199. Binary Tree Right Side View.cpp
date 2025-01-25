@@ -1,6 +1,10 @@
 // problem link: https://leetcode.com/problems/binary-tree-right-side-view/
 
 #include<iostream>
+#include<map>
+#include<vector>
+#include<queue>
+
 using namespace std;
 
  struct TreeNode {
