@@ -1,4 +1,4 @@
-// problem link: https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/
+// problem link: https://leetcode.com/problems/partition-equal-subset-sum
 
 #include<iostream>
 #include<vector>
