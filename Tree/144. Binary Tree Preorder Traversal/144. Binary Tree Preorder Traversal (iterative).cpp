@@ -38,3 +38,27 @@ public:
         return res;
     }
 };
+
+class Solution {
+    public:
+        vector<int> preorderTraversal(TreeNode* root) {
+            vector<int> res;
+            if (!root) return res;
+    
+            stack<TreeNode*> st;
+            TreeNode* cur = root;
+    
+            while (!st.empty() || cur) {
+                while (cur) {
+                    res.push_back(cur->val);
+                    st.push(cur);
+                    cur = cur->left;
+                }
+    
+                cur = st.top(); st.pop();
+                cur = cur->right;
+            } 
+    
+            return res;
+        }
+    };
